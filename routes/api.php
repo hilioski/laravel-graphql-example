@@ -17,5 +17,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+
+Route::group(['middleware' => 'api', 'prefix' => 'auth'], function ($router) {
+    Route::post('login', Auth\JWTAuthController::class.'@login');
+    Route::post('register', Auth\JWTAuthController::class.'@register');
+    Route::post('logout', Auth\JWTAuthController::class.'@logout');
+    Route::post('refresh', Auth\JWTAuthController::class.'@refresh');
+});
+
 Route::resource('/movies', MovieController::class);
 Route::resource('/actors', ActorController::class);
