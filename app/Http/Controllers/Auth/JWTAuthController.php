@@ -10,13 +10,6 @@ use Tymon\JWTAuth\Exceptions\JWTException;
 
 class JWTAuthController extends Controller
 {
-
-    /**
-     * @var
-     */
-    private $user;
-
-
     /**
      * Create a new AuthController instance.
      *
@@ -24,8 +17,7 @@ class JWTAuthController extends Controller
      */
     public function __construct(User $user)
     {
-        $this->middleware('jwt.auth', [ 'except' => [ 'login', 'register' ] ]);
-        $this->user = $user;
+        $this->middleware('jwt.auth', [ 'except' => [ 'login' ] ]);
     }
 
 

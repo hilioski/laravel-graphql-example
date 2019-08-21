@@ -15,8 +15,11 @@ type Query {
 
 type User {
     id: ID!
+    token: String
     name: String!
     email: String!
+    city: String
+    phone: String
     created_at: DateTime!
     updated_at: DateTime!
 }
@@ -37,4 +40,8 @@ type Actor {
     created_at: DateTime!
     updated_at: DateTime!
     movies: [Movie] @hasMany
+}
+
+type Mutation {
+    login(email: String!, password: String!): User @field(resolver: "AuthMutator@login")
 }
