@@ -65,3 +65,8 @@ mutation {
 ## ALTERNATIVELY:
 
 Same exact API, but REST
+
+________________________
+## USED PACKAGES:
+- [spatie/laravel-query-builder] https://github.com/spatie/laravel-query-builder
+- [nuwave/lighthouse] https://github.com/nuwave/lighthouse
