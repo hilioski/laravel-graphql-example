@@ -66,6 +66,11 @@ mutation {
 
 Same exact API, but REST
 
+## REST API ENDPOINTS
+- Login `/api/auth/login`
+- Movies `/api/movies` (* possible query parameters is `fields`, `include`... see more at https://github.com/spatie/laravel-query-builder)
+- Actors `/api/actors` (* possible query parameters is `fields`, `include`... see more at https://github.com/spatie/laravel-query-builder)
+
 ________________________
 ## USED PACKAGES:
 - [spatie/laravel-query-builder] https://github.com/spatie/laravel-query-builder
